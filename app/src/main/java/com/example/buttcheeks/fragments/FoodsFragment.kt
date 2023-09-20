@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.buttcheeks.R
 import com.example.buttcheeks.interfaces.OnNavigationBtnListener
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.navigation.NavigationView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,14 +18,13 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DiaryFragment.newInstance] factory method to
+ * Use the [FoodsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DiaryFragment : Fragment() {
+class FoodsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +39,9 @@ class DiaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment and store it to operate with it
-        val view =  inflater.inflate(R.layout.fragment_diary, container, false)
+        val view =  inflater.inflate(R.layout.fragment_foods, container, false)
 
-        val toolbar = view.findViewById<MaterialToolbar>(R.id.materialToolbar2)
+        val toolbar = view.findViewById<MaterialToolbar>(R.id.mtbFoods)
         val listener : OnNavigationBtnListener = activity as OnNavigationBtnListener
         //Ejecuta el callback implementado en la actividad
         toolbar.setNavigationOnClickListener{
@@ -50,8 +51,6 @@ class DiaryFragment : Fragment() {
         return view
     }
 
-
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -59,17 +58,16 @@ class DiaryFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment DiaryFragment.
+         * @return A new instance of fragment FoodsFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            DiaryFragment().apply {
+            FoodsFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
     }
-
 }

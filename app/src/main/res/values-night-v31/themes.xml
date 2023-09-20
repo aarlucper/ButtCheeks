@@ -4,6 +4,6 @@
     <style name="Theme.ButtCheeks" parent="Theme.MaterialComponents.NoActionBar">
 
         <!-- Customize your theme here. -->
-        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_butto_foreground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_cheeko</item>
     </style>
 </resources>

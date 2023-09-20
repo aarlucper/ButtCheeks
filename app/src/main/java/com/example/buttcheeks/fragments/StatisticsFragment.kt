@@ -16,14 +16,13 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DiaryFragment.newInstance] factory method to
+ * Use the [StatisticsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DiaryFragment : Fragment() {
+class StatisticsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +37,9 @@ class DiaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment and store it to operate with it
-        val view =  inflater.inflate(R.layout.fragment_diary, container, false)
+        val view =  inflater.inflate(R.layout.fragment_statistics, container, false)
 
-        val toolbar = view.findViewById<MaterialToolbar>(R.id.materialToolbar2)
+        val toolbar = view.findViewById<MaterialToolbar>(R.id.mtbStatistics)
         val listener : OnNavigationBtnListener = activity as OnNavigationBtnListener
         //Ejecuta el callback implementado en la actividad
         toolbar.setNavigationOnClickListener{
@@ -50,8 +49,6 @@ class DiaryFragment : Fragment() {
         return view
     }
 
-
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -59,17 +56,16 @@ class DiaryFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment DiaryFragment.
+         * @return A new instance of fragment StatisticsFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            DiaryFragment().apply {
+            StatisticsFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
     }
-
 }
