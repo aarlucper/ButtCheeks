@@ -18,7 +18,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_menu_24"
-        app:title="Foods" />
+        app:title="Foods"
+        app:menu="@menu/toolbar_foods"/>
 
     <TextView
         android:id="@+id/tvFoods"

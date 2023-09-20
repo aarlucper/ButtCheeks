@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_menu_24"
-        app:title="Statistics" />
+        app:title="Statistics"
+        app:menu="@menu/toolbar_statistics"/>
 
     <TextView
         android:id="@+id/tvStatistics"

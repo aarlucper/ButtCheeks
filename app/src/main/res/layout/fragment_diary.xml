@@ -9,7 +9,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar2"
+        android:id="@+id/mtbDiary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.ButtCheeks"
@@ -17,7 +17,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_menu_24"
-        app:title="Diary" />
+        app:title="Diary"
+        app:menu="@menu/toolbar_diary"/>
 
     <TextView
         android:id="@+id/tvDiary"

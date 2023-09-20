@@ -40,7 +40,7 @@ class DiaryFragment : Fragment() {
         // Inflate the layout for this fragment and store it to operate with it
         val view =  inflater.inflate(R.layout.fragment_diary, container, false)
 
-        val toolbar = view.findViewById<MaterialToolbar>(R.id.materialToolbar2)
+        val toolbar = view.findViewById<MaterialToolbar>(R.id.mtbDiary)
         val listener : OnNavigationBtnListener = activity as OnNavigationBtnListener
         //Ejecuta el callback implementado en la actividad
         toolbar.setNavigationOnClickListener{
