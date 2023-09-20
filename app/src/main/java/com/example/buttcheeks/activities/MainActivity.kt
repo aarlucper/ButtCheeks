@@ -13,7 +13,7 @@ import com.example.buttcheeks.interfaces.OnNavigationBtnListener
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), OnNavigationBtnListener {
+class MainActivity : BaseOnBackPressedActivity(), OnNavigationBtnListener {
 
     private lateinit var drawerLayout : DrawerLayout
 
@@ -71,5 +71,9 @@ class MainActivity : AppCompatActivity(), OnNavigationBtnListener {
     override fun onNavigationBtnClick(toolbar: MaterialToolbar) {
         //Abre el menú de navegación
         drawerLayout.open()
+    }
+
+    override fun onBackPressed() {
+        onTwiceBackPressed(this)
     }
 }
